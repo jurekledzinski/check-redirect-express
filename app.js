@@ -64,6 +64,7 @@ app.disable("x-powered-by");
 app.use(
   cors({
     credentials: true,
+    origin: "https://calm-dusk-64313.herokuapp.com",
   })
 );
 app.use(express.json());
@@ -82,8 +83,9 @@ app.use(
       collection: "session",
     }),
     cookie: {
+      httpOnly: true,
       maxAge: 1000 * 60 * 60 * 1,
-      secure: nodeEnv === "production",
+      secure: nodeEnv === "production" ? true : false,
       sameSite: nodeEnv === "production" ? "none" : "lax",
     },
   })
@@ -92,7 +94,7 @@ app.use(
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' mongodb.com *.mongodb.com paypal.com *.paypal.com fontawesome.com *.fontawesome.com fonts.google.com  *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com; img-src *;font-src *"
+    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com fontawesome.com *.fontawesome.com fonts.google.com  *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com; img-src *;font-src *"
   );
   next();
 });
