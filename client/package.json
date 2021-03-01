@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Ecommerc shop build from scratch",
   "main": "index.js",
+  "proxy": "https://calm-dusk-64313.herokuapp.com",
   "scripts": {
-    "begin": "webpack-dev-server --mode=development",
+    "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   },
   "author": "Jerzy Ledzinski",
