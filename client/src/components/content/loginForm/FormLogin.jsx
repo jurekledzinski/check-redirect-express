@@ -141,7 +141,7 @@ const FormLogin = ({ handleClose, isModalOpen }) => {
         person.role === Role.Admin ? setIsAdmin(true) : setIsAdmin(false);
       }
 
-      isUrlLogin
+      isMounted.current && isUrlLogin
         ? (timeOut.current = setTimeout(() => history.push("/"), 2000))
         : null;
     } else {
