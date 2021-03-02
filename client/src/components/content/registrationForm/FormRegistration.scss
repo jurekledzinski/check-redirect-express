@@ -43,11 +43,15 @@
   }
 
   @media screen and (orientation: landscape) and (max-width: 823px) {
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
     margin-top: -70px;
+  }
+
+  @media (orientation: landscape) and (max-width: 667px) {
+    width: 100%;
   }
 
   @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
@@ -320,6 +324,10 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: $font-family-modal-forms-buttons-inputs-labels;
+
+    @include media-queries(medium) {
+      margin-top: 50px;
+    }
 
     @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
       padding: 10px 0;

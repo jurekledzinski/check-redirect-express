@@ -281,6 +281,10 @@
     text-transform: uppercase;
     font-family: $font-family-modal-forms-buttons-inputs-labels;
 
+    @include media-queries(medium) {
+      margin-top: 50px;
+    }
+
     @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
       padding: 10px 0;
     }
