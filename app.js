@@ -95,7 +95,7 @@ app.use(
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com; img-src 'self' * data;font-src *; object-src 'self';script-src 'self' 'sha256-muinbbhYT4ByGcX7i9h85DyS1kl3Gt7qraXrucPlmEA=' paypal.com *.paypal.com;style-src 'self' 'sha256-d1OkUg5jshsAG6I70EkZzGD+jAPT/OySA1eiJqM88c4= sha256-x+q8ssf6FVyPqA60+c5EAw8cBrFNEK5KD8ON4Swm4FY= sha256-Nf1liq5MLnzQy8hoy84wGdbs9nIfvP92y7jcqBJXyJE=' fontawesome.com *.fontawesome.com fonts.google.com  *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com;"
+    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com; img-src 'self' * data;font-src *; object-src 'self';script-src 'self' 'sha256-muinbbhYT4ByGcX7i9h85DyS1kl3Gt7qraXrucPlmEA=' paypal.com *.paypal.com;style-src 'self' fontawesome.com *.fontawesome.com fonts.google.com  *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com;"
   );
   next();
 });
