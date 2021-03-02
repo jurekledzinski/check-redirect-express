@@ -141,9 +141,11 @@ const FormLogin = ({ handleClose, isModalOpen }) => {
         person.role === Role.Admin ? setIsAdmin(true) : setIsAdmin(false);
       }
 
-      isMounted.current && isUrlLogin
-        ? (timeOut.current = setTimeout(() => history.push("/"), 2000))
-        : null;
+      if (isModalOpen.current && isUrlLogin) {
+        timeOut.current = setTimeout(() => history.push("/"), 2000);
+      } else {
+        return null;
+      }
     } else {
       adjustValidationMsg(data.alert);
     }
