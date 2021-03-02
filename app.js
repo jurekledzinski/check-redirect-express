@@ -95,7 +95,7 @@ app.use(
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com; img-src *;font-src *; object-src 'self';script-src 'self' 'sha256-muinbbhYT4ByGcX7i9h85DyS1kl3Gt7qraXrucPlmEA=' paypal.com *.paypal.com;style-src 'self' 'sha256-ZXNh3ljnxEdJAtVszIOVgusnFUFej6/blxZmaswNRK4=' fontawesome.com *.fontawesome.com fonts.google.com *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com;"
+    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com; img-src *;font-src *; object-src 'self';script-src 'self' 'sha256-muinbbhYT4ByGcX7i9h85DyS1kl3Gt7qraXrucPlmEA=' paypal.com *.paypal.com;style-src 'unsafe-inline' fontawesome.com *.fontawesome.com fonts.google.com *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com;"
   );
   next();
 });
