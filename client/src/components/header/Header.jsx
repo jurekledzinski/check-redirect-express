@@ -153,7 +153,7 @@ const Header = ({ location }) => {
         break;
       case false:
         if (!isModalOpen && urlLogIn && !Boolean(user)) {
-          history.push("/");
+          //   history.push("/");
           setTimeout(() => {
             setisModalOpen(true);
             setchooseModal(true);
