@@ -72,7 +72,7 @@ const Header = ({ location }) => {
   };
 
   const redirectToHomePage = () => {
-    history.push("/");
+    // history.push("/");
   };
 
   const handleModal = () => {
