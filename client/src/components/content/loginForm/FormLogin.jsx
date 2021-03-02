@@ -75,7 +75,7 @@ const FormLogin = ({ handleClose, isModalOpen }) => {
         setTimeout(() => {
           adjustValidationMsg("");
           setValidationMsg("");
-          isUrlLogin ? history.push("/") : handleClose();
+          isUrlLogin ? null : handleClose();
         }, 1500);
     }
   };
