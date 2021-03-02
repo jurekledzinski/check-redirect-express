@@ -95,7 +95,7 @@ app.use(
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com fontawesome.com *.fontawesome.com fonts.google.com  *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com; img-src *;font-src *"
+    "default-src 'self' firebasestorage.googleapis.com *.firebasestorage.googleapis.com mongodb.com *.mongodb.com paypal.com *.paypal.com fontawesome.com *.fontawesome.com fonts.google.com  *.fonts.google.com fonts.googleapis.com *.fonts.googleapis.com; img-src * data;font-src *;style-src 'self' paypal.com *.paypal.com; script-src 'self' paypal.com *.paypal.com;"
   );
   next();
 });
