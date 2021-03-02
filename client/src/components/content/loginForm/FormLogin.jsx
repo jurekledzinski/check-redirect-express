@@ -73,9 +73,9 @@ const FormLogin = ({ handleClose, isModalOpen }) => {
       timeOut.current =
         isMounted.current &&
         setTimeout(() => {
-          isUrlLogin ? null : handleClose();
           adjustValidationMsg("");
           setValidationMsg("");
+          isUrlLogin ? history.push("/") : handleClose();
         }, 1500);
     }
   };
@@ -139,12 +139,6 @@ const FormLogin = ({ handleClose, isModalOpen }) => {
         setUser(person);
         stopCloseModalIfValidate(success);
         person.role === Role.Admin ? setIsAdmin(true) : setIsAdmin(false);
-      }
-
-      if (isModalOpen.current && isUrlLogin) {
-        timeOut.current = setTimeout(() => history.push("/"), 2000);
-      } else {
-        return null;
       }
     } else {
       adjustValidationMsg(data.alert);
