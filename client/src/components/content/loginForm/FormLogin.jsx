@@ -142,7 +142,7 @@ const FormLogin = ({ handleClose, isModalOpen }) => {
       }
 
       isUrlLogin
-        ? (timeOut.current = setTimeout(() => history.push("/"), 1600))
+        ? (timeOut.current = setTimeout(() => history.push("/"), 2000))
         : null;
     } else {
       adjustValidationMsg(data.alert);
